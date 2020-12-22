@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         {{-- FONTS --}}
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Teko:wght@300;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display&family=Teko:wght@300;600&display=swap" rel="stylesheet">
 
         {{-- JS --}}
         <link rel="stylesheet" href="{{ asset('js/app.js') }}">

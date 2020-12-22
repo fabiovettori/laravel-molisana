@@ -1,7 +1,7 @@
 main {
     .hero-section .hero-image {
         font-family: 'Open Sans', sans-serif;
-        height: 800px;
+        height: 900px;
         width: 100%;
         background-image: url('https://i.vimeocdn.com/clip_outro_background/678377.webp?mw=1600&mh=900');
         background-size: 100%;
@@ -11,6 +11,103 @@ main {
         &:hover {
             cursor: pointer;
             background-size: 110%;
+        }
+    }
+
+    .grid-products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 480px;
+
+        .top-left {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            background-color: #c32230;
+
+            div {
+                height: 100%;
+
+                h3 {
+                    color: #ffffff;
+                    font-size: 32px;
+                    font-weight: 400;
+                    font-family: 'Playfair Display', serif;
+                }
+            }
+
+            img {
+                float: left;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .top-rigth {
+            grid-column: 3 / 6;
+            grid-row: 1 / 2;
+            background-color: #daa624;
+
+            div {
+                height: 100%;
+
+                h3 {
+                    color: #ffffff;
+                    font-size: 32px;
+                    font-weight: 400;
+                    font-family: 'Playfair Display', serif;
+                }
+            }
+
+            img {
+                float: left;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .middle-left {
+            grid-column: 1 / 3;
+            grid-row: 2 / 4;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .middle-rigth {
+            grid-column: 3 / 6;
+            grid-row: 2 / 4;
+
+            img {
+                float: left;
+                max-width: 50%;
+                height: 50%;
+            }
+        }
+
+        .bottom-left {
+            grid-column: 1 / 3;
+            grid-row: 4 / 6;
+
+            img {
+                float: left;
+                max-width: 50%;
+                height: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .bottom-rigth {
+            grid-column: 3 / 6;
+            grid-row: 4 / 6;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 
