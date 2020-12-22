@@ -1,9 +1,29 @@
 main {
     .hero-section .hero-image {
+        font-family: 'Open Sans', sans-serif;
         height: 800px;
         width: 100%;
         background-image: url('https://i.vimeocdn.com/clip_outro_background/678377.webp?mw=1600&mh=900');
-        background-size: contain;
+        background-size: 100%;
         background-position: center;
+        transition: all .5s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-size: 110%;
+        }
+    }
+
+    .motto {
+        background-color: $motto_primary_color;
+        color: #ffffff;
+        padding: 20px 0;
+
+        h2 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: 400;
+            margin: 0;
+        }
     }
 }

@@ -16108,6 +16108,10 @@ readers do not read off random characters that represent icons */
 
 header {
   font-family: "Teko", sans-serif;
+  font-weight: 300;
+}
+header .header-menu {
+  margin-top: 10px;
 }
 header li a {
   font-size: 24px;
@@ -16119,9 +16123,74 @@ header li a:hover {
 }
 
 main .hero-section .hero-image {
+  font-family: "Open Sans", sans-serif;
   height: 800px;
   width: 100%;
   background-image: url("https://i.vimeocdn.com/clip_outro_background/678377.webp?mw=1600&mh=900");
-  background-size: contain;
+  background-size: 100%;
   background-position: center;
+  transition: all 0.5s ease;
+}
+main .hero-section .hero-image:hover {
+  cursor: pointer;
+  background-size: 110%;
+}
+main .motto {
+  background-color: #001942;
+  color: #ffffff;
+  padding: 20px 0;
+}
+main .motto h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 0;
+}
+
+footer {
+  padding-top: 100px;
+}
+footer .footer-top li:first-of-type {
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Teko", sans-serif;
+  color: #0d2240;
+}
+footer .footer-top li a {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #808080;
+}
+footer .footer-top li a.exeption {
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Teko", sans-serif;
+  color: #0d2240;
+}
+footer .footer-top li a:hover {
+  text-decoration: none;
+}
+footer .footer-top .company-details {
+  font-size: 11px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #808080;
+}
+footer .footer-top .company-details p {
+  margin: 3px 0;
+}
+footer .footer-top .company-details p strong {
+  font-weight: bold;
+}
+footer .footer-top .company-details .email-important {
+  text-decoration: underline;
+  color: #808080;
+}
+footer .footer-bottom {
+  height: 150px;
+  width: 100%;
+  background-image: url("../images/footer-montagne-bottom.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

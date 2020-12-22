@@ -1,0 +1,60 @@
+footer {
+    padding-top: 100px;
+
+    .footer-top {
+        li {
+            &:first-of-type {
+                font-size: 26px;
+                font-weight: 600;
+                font-family: 'Teko', sans-serif;
+                color: $footer_group_color;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 300;
+                font-family: 'Open Sans', sans-serif;
+                color: $footer_list_color;
+
+                &.exeption {
+                    font-size: 26px;
+                    font-weight: 600;
+                    font-family: 'Teko', sans-serif;
+                    color: $footer_group_color;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .company-details {
+            font-size: 11px;
+            font-weight: 300;
+            font-family: 'Open Sans', sans-serif;
+            color: $footer_list_color;
+
+            p {
+                margin: 3px 0;
+
+                strong {
+                    font-weight: bold;
+                }
+            }
+
+            .email-important {
+                text-decoration: underline;
+                color: $footer_list_color;
+            }
+        }
+    }
+
+    .footer-bottom {
+        height: 150px;
+        width: 100%;
+        background-image: url('../images/footer-montagne-bottom.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
