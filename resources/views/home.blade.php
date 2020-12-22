@@ -1,5 +1,11 @@
 @extends('partials.common')
 
 @section('content')
-    <h2>test</h2>
+    <div class=" hero-section container-fluid">
+        <div class="row">
+            <div class="col-lg-12 hero-image">
+
+            </div>
+        </div>
+    </div>
 @endsection

@@ -16109,3 +16109,19 @@ readers do not read off random characters that represent icons */
 header {
   font-family: "Teko", sans-serif;
 }
+header li a {
+  font-size: 24px;
+  color: #444444;
+  text-transform: capitalize;
+}
+header li a:hover {
+  text-decoration: none;
+}
+
+main .hero-section .hero-image {
+  height: 800px;
+  width: 100%;
+  background-image: url("https://i.vimeocdn.com/clip_outro_background/678377.webp?mw=1600&mh=900");
+  background-size: contain;
+  background-position: center;
+}

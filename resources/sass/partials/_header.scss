@@ -1,3 +1,15 @@
 header {
     font-family: 'Teko', sans-serif;
+
+    li {
+        a {
+            font-size: 24px;
+            color: $header_primary_color;
+            text-transform: capitalize;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
