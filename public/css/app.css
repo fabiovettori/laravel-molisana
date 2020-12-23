@@ -16585,3 +16585,59 @@ footer .footer-bottom {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+main .products .title {
+  background-color: #b8dae6;
+  color: #002d73;
+  margin-bottom: 1px;
+}
+main .products .title h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+main .products .title a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #001942;
+}
+main .products .title a:hover {
+  text-decoration: none;
+  color: #001942;
+}
+main .products .details {
+  background-color: #b8dae6;
+  color: #002d73;
+}
+main .products .details h3 {
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  padding: 20px;
+  margin: 0;
+}
+main .products .details .grid {
+  border-bottom: 1px solid black;
+}
+main .products .details .grid-y {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+main .products .description {
+  background-color: #b8dae6;
+  color: #002d73;
+  padding-top: 20px;
+}
+main .products .description p {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 300;
+}
+main .products .divider {
+  background-image: url("../images/posate-classiche.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}

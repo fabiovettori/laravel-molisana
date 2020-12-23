@@ -1,0 +1,70 @@
+main {
+    .products {
+
+        .title {
+            background-color: $product_page_primary_color;
+            color: $product_page_text_color;
+            margin-bottom: 1px;
+
+            h3 {
+                font-size: 16px;
+                line-height: 24px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                margin: 0;
+            }
+
+            a {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                color: #001942;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #001942;
+                }
+            }
+        }
+
+        .details {
+            background-color: $product_page_primary_color;
+            color: $product_page_text_color;
+
+            h3 {
+                font-family: 'Teko', sans-serif;
+                font-size: 40px;
+                padding: 20px;
+                margin: 0;
+            }
+
+            .grid {
+                border-bottom: 1px solid black;
+            }
+
+            .grid-y {
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+            }
+        }
+
+        .description {
+            background-color: $product_page_primary_color;
+            color: $product_page_text_color;
+            padding-top: 20px;
+
+            p {
+                font-family: 'Playfair Display', serif;
+                font-size: 24px;
+                font-weight: 300;
+            }
+        }
+
+        .divider {
+            background-image: url('../images/posate-classiche.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 400px;
+        }
+    }
+}
