@@ -16106,22 +16106,134 @@ readers do not read off random characters that represent icons */
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.scroll-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+  fill: currentColor;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.scroll-top.active {
+  right: 20px;
+}
+.scroll-top:hover {
+  cursor: pointer;
+}
+
 header {
   font-family: "Teko", sans-serif;
   font-weight: 300;
+  position: relative;
 }
 header .header-menu {
   margin-top: 10px;
 }
 header li a {
+  display: block;
   font-size: 24px;
   color: #444444;
   text-transform: capitalize;
+  padding: 10px;
+  color: #001942;
 }
 header li a:hover {
   text-decoration: none;
+  background-color: #B3E5FC;
+  color: #001942;
+}
+header .finder-icon {
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+  fill: currentColor;
+  color: rgba(44, 44, 44, 0.4);
+}
+header .finder-icon:hover {
+  cursor: pointer;
+}
+header .finder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.94);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .finder .finder-closer {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  fill: currentColor;
+  color: #ffffff;
+  height: 30px;
+}
+header .finder .finder-closer:hover {
+  cursor: pointer;
+}
+header .finder form {
+  position: relative;
+}
+header .finder form .finder-start {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  transform: translateX(-50%);
+  fill: currentColor;
+  color: rgba(255, 255, 255, 0.2);
+}
+header .finder form .finder-start:hover {
+  cursor: pointer;
+}
+header .finder p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+header .finder input {
+  width: 800px;
+  height: 50px;
+  color: #fff;
+  background-color: transparent;
+  box-shadow: 0 3px 0 0 rgba(255, 255, 255, 0.1);
+  border: 0;
+  border-radius: 10px;
+  font-size: 35px;
+  outline: none;
+  padding: 20px;
+  text-align: center;
+  cursor: text;
+  transition: all 0.3s ease-out;
 }
 
+@media screen and (min-width: 1400px) {
+  .header-menu, .finder-icon {
+    display: block;
+  }
+}
 main .hero-section .hero-image {
   font-family: "Open Sans", sans-serif;
   height: 900px;
@@ -16230,6 +16342,46 @@ main .motto h2 {
   letter-spacing: 2px;
   font-weight: 400;
   margin: 0;
+}
+main .card-container {
+  height: 100%;
+  width: 100%;
+}
+main .card-container .tile {
+  overflow: hidden;
+  position: relative;
+}
+main .card-container .tile img {
+  transition: all 0.3s ease;
+  max-width: 100%;
+}
+main .card-container .tile a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+main .card-container .tile a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+main .card-container .tile:hover img {
+  transform: scale(1.1);
+}
+main .card-container .tile:hover a {
+  padding-top: 0px;
+  opacity: 1;
 }
 
 footer {

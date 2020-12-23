@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display&family=Teko:wght@300;600&display=swap" rel="stylesheet">
 
         {{-- JS --}}
-        <link rel="stylesheet" href="{{ asset('js/app.js') }}">
+        <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
     </head>
     <body>
         @include('partials.header')
@@ -21,5 +21,12 @@
         </main>
 
         @include('partials.footer')
+
+        <div class="scroll-top">
+            <svg class="mk-svg-icon" style=" height:16px; width: 16px; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792">
+                <path d="M1683 1331l-166 165q-19 19-45 19t-45-19l-531-531-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z">
+                </path>
+            </svg>
+        </div>
     </body>
 </html>

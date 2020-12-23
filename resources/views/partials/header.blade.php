@@ -10,7 +10,7 @@
     <div class="container-lg header-menu">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <ul class="d-flex justify-content-between list-unstyled">
+                <ul class="d-flex justify-content-between list-unstyled m-0">
                     <li><a href="{{ route('home') }}">home</a></li>
                     <li><a href="#">grano italiano</a></li>
                     <li><a href="#">tenacità certificata</a></li>
@@ -32,6 +32,31 @@
                     <li><a href="#">FR</a></li>
                 </ul>
             </div>
+        </div>
+
+        <div class="finder-icon">
+            <svg class="mk-svg-icon" style=" height:24px; width: 22.285714285714px; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792">
+                <path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z">
+                </path>
+            </svg>
+        </div>
+
+        <div class="finder d-none text-uppercase">
+            <p>inizia a digitare  premi enter per effettuare una ricerca</p>
+
+            <form>
+                <input type="text">
+
+                <svg class="finder-start" style=" height:24px; width: 22.285714285714px; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792">
+                    <path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z">
+                    </path>
+                </svg>
+            </form>
+
+            <svg class="finder-closer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M390.628 345.372l-45.256 45.256-89.372-89.373-89.373 89.372-45.255-45.255 89.373-89.372-89.372-89.373 45.254-45.254 89.373 89.372 89.372-89.373 45.256 45.255-89.373 89.373 89.373 89.372z">
+                </path>
+            </svg>
         </div>
     </div>
 </header>

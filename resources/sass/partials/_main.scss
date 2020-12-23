@@ -123,4 +123,52 @@ main {
             margin: 0;
         }
     }
+
+    .card-container {
+        height: 100%;
+        width: 100%;
+
+        .tile {
+            overflow: hidden;
+            position: relative;
+
+            img {
+                transition: all .3s ease;
+                max-width: 100%;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                padding-top: 20px;
+                height: 100%;
+                width: 100%;
+                color: #ffffff;
+                font-size: 22px;
+                font-family: 'Playfair Display', serif;
+                font-weight: 400;
+                opacity: 0;
+                transition: all .3s ease;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.05);
+
+
+                &:hover {
+                    text-decoration: none;
+                    color: #ffffff;
+                }
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+
+            &:hover a {
+                padding-top: 0px;
+                opacity: 1;
+            }
+        }
+    }
 }
