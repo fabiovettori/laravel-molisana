@@ -3,8 +3,22 @@ header {
     font-weight: 300;
     position: relative;
 
-    .header-menu, .finder-icon {
-        // display: none;
+    .menu-links, .finder-icon {
+        display: none;
+    }
+
+    .hamburger {
+        height: 56px;
+        @include flex(row, center, center);
+
+        span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            border-radius: 1px;
+            margin: 4px 0;
+            background-color: $store-color_primary;
+        }
     }
 
     .header-menu {
@@ -108,10 +122,28 @@ header {
             transition: all .3s ease-out;
         }
     }
+
+    .finder-closer {
+        transition: transform .3s ease;
+        &:hover {
+            transform: rotateZ(90deg);
+        }
+    }
 }
 
 @media screen and (min-width: 1400px){
-    .header-menu, .finder-icon {
-        display: block;
+
+    header {
+        .menu-links {
+            @include flex(row, center, center);
+        }
+
+        .finder-icon {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+        }
     }
 }

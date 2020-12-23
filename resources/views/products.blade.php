@@ -1,5 +1,7 @@
 @extends('partials.common')
 
+@section('title', 'Products - La Molisana')
+
 @section('content')
     <section class="products-list">
         <div class="container-fluid p-0">

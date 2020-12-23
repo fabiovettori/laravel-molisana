@@ -16128,6 +16128,7 @@ body {
   fill: currentColor;
   color: #ffffff;
   transition: all 0.3s ease;
+  z-index: 3;
 }
 .scroll-top.active {
   right: 20px;
@@ -16140,6 +16141,24 @@ header {
   font-family: "Teko", sans-serif;
   font-weight: 300;
   position: relative;
+}
+header .menu-links, header .finder-icon {
+  display: none;
+}
+header .hamburger {
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+  margin: 4px 0;
+  background-color: #001492;
 }
 header .header-menu {
   margin-top: 10px;
@@ -16228,10 +16247,25 @@ header .finder input {
   cursor: text;
   transition: all 0.3s ease-out;
 }
+header .finder-closer {
+  transition: transform 0.3s ease;
+}
+header .finder-closer:hover {
+  transform: rotateZ(90deg);
+}
 
 @media screen and (min-width: 1400px) {
-  .header-menu, .finder-icon {
+  header .menu-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header .finder-icon {
     display: block;
+  }
+  header .hamburger {
+    display: none;
   }
 }
 main .hero-section .hero-image {
@@ -16239,13 +16273,13 @@ main .hero-section .hero-image {
   height: 900px;
   width: 100%;
   background-image: url("https://i.vimeocdn.com/clip_outro_background/678377.webp?mw=1600&mh=900");
-  background-size: 100%;
+  background-size: 90%;
   background-position: center;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
 }
 main .hero-section .hero-image:hover {
   cursor: pointer;
-  background-size: 110%;
+  background-size: 95%;
 }
 main .grid-products {
   display: grid;
@@ -16256,13 +16290,14 @@ main .grid-products .top-left {
   grid-column: 1/3;
   grid-row: 1/2;
   background-color: #c32230;
+  position: relative;
 }
 main .grid-products .top-left div {
   height: 100%;
 }
 main .grid-products .top-left div h3 {
   color: #ffffff;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
   font-family: "Playfair Display", serif;
 }
@@ -16272,10 +16307,40 @@ main .grid-products .top-left img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .grid-products .top-left::after {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 100px;
+  color: rgba(255, 58, 45, 0.2);
+  content: "Pasta";
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin-left: 50px;
+  top: 0;
+  z-index: 2;
+}
+main .grid-products .top-left a {
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 20px;
+  border: none;
+  color: #002d73;
+  font-weight: 400;
+  border-radius: 17px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+main .grid-products .top-left a:hover {
+  background-color: #d9dabc;
+  text-decoration: none;
+}
 main .grid-products .top-rigth {
   grid-column: 3/6;
   grid-row: 1/2;
   background-color: #daa624;
+  position: relative;
 }
 main .grid-products .top-rigth div {
   height: 100%;
@@ -16292,6 +16357,35 @@ main .grid-products .top-rigth img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .grid-products .top-rigth::after {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 100px;
+  color: rgba(232, 180, 39, 0.24);
+  content: "Semole";
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin-left: 50px;
+  top: 0;
+  z-index: 2;
+}
+main .grid-products .top-rigth a {
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 20px;
+  border: none;
+  color: #002d73;
+  font-weight: 400;
+  border-radius: 17px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+main .grid-products .top-rigth a:hover {
+  background-color: #d9dabc;
+  text-decoration: none;
+}
 main .grid-products .middle-left {
   grid-column: 1/3;
   grid-row: 2/4;
@@ -16306,21 +16400,27 @@ main .grid-products .middle-rigth {
   grid-column: 3/6;
   grid-row: 2/4;
 }
-main .grid-products .middle-rigth img {
+main .grid-products .middle-rigth > div {
   float: left;
   max-width: 50%;
   height: 50%;
+}
+main .grid-products .middle-rigth > div img {
+  max-width: 100%;
+  height: 100%;
 }
 main .grid-products .bottom-left {
   grid-column: 1/3;
   grid-row: 4/6;
 }
-main .grid-products .bottom-left img {
+main .grid-products .bottom-left > div {
   float: left;
   max-width: 50%;
   height: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+main .grid-products .bottom-left > div img {
+  max-width: 100%;
+  height: 100%;
 }
 main .grid-products .bottom-rigth {
   grid-column: 3/6;
@@ -16331,6 +16431,60 @@ main .grid-products .bottom-rigth img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .grid-products .more-info {
+  position: relative;
+}
+main .grid-products .more-info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #001942;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+main .grid-products .more-info:hover::after {
+  opacity: 0.85;
+}
+main .grid-products .more-info:hover .description-info {
+  opacity: 1;
+}
+main .grid-products .more-info:hover .description-info h3 {
+  padding-top: 20%;
+}
+main .grid-products .description-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+main .grid-products .description-info:hover {
+  cursor: pointer;
+}
+main .grid-products .description-info svg {
+  width: 50px;
+  fill: currentColor;
+  color: #ffffff;
+}
+main .grid-products .description-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+  padding-top: 25%;
+  transition: all 0.3s ease;
 }
 main .motto {
   background-color: #001942;

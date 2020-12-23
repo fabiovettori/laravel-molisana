@@ -23,6 +23,7 @@ body {
     fill: currentColor;
     color: #ffffff;
     transition: all .3s ease;
+    z-index: 3;
 
     &.active {
         right: 20px;
