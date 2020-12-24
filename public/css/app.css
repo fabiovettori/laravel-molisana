@@ -16171,7 +16171,7 @@ header li a {
   padding: 10px;
   color: #001942;
 }
-header li a:hover {
+header li a:hover, header li a.active {
   text-decoration: none;
   background-color: #B3E5FC;
   color: #001942;
@@ -16607,6 +16607,166 @@ main .products .title a {
 main .products .title a:hover {
   text-decoration: none;
   color: #001942;
+}
+main .products .images {
+  position: relative;
+  overflow-x: hidden;
+}
+main .products .images .prev, main .products .images .next {
+  position: absolute;
+  top: 100px;
+  height: 200px;
+  width: 220px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.77, 0.12, 0.26, 0.94);
+}
+main .products .images .prev {
+  left: -150px;
+}
+main .products .images .prev a {
+  color: #252525;
+}
+main .products .images .prev:hover {
+  left: 0;
+}
+main .products .images .prev .top {
+  height: 60%;
+  width: 100%;
+  float: left;
+}
+main .products .images .prev .top .preview {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: red;
+}
+main .products .images .prev .top .preview img {
+  width: 110px;
+  height: 120px;
+}
+main .products .images .prev .top .arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+main .products .images .prev .top .arrow svg {
+  fill: currentColor;
+  color: #ffffff;
+  width: 20px;
+}
+main .products .images .prev .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  width: 100%;
+  float: left;
+  opacity: 0;
+  background-color: #ffffff;
+  padding: 0;
+  transition: opacity 0.3s 0.5s ease;
+}
+main .products .images .prev .bottom h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #252525;
+  line-height: 20px;
+  opacity: 0;
+}
+main .products .images .prev:hover .bottom {
+  opacity: 1;
+  height: 40%;
+  padding: 20px;
+}
+main .products .images .prev:hover .bottom h3 {
+  opacity: 1;
+}
+main .products .images .prev:hover .arrow {
+  padding-left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+main .products .images .next {
+  right: -150px;
+}
+main .products .images .next a {
+  color: #252525;
+}
+main .products .images .next:hover {
+  right: 0;
+}
+main .products .images .next .top {
+  height: 60%;
+  width: 100%;
+  float: left;
+}
+main .products .images .next .top .preview {
+  width: 50%;
+  height: 100%;
+  float: right;
+  background-color: red;
+}
+main .products .images .next .top .preview img {
+  width: 110px;
+  height: 120px;
+}
+main .products .images .next .top .arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+  width: 50%;
+  height: 100%;
+  float: right;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+main .products .images .next .top .arrow svg {
+  fill: currentColor;
+  color: #ffffff;
+  width: 20px;
+}
+main .products .images .next .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  width: 100%;
+  float: left;
+  opacity: 0;
+  background-color: #ffffff;
+  padding: 0;
+  transition: opacity 0.3s 0.5s ease;
+}
+main .products .images .next .bottom h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #252525;
+  line-height: 20px;
+  opacity: 0;
+}
+main .products .images .next:hover .bottom {
+  opacity: 1;
+  height: 40%;
+  padding: 20px;
+}
+main .products .images .next:hover .bottom h3 {
+  opacity: 1;
+}
+main .products .images .next:hover .arrow {
+  padding-right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 main .products .details {
   background-color: #b8dae6;

@@ -26,6 +26,27 @@ Route::get('/products', function(){
 
     $pasta = config('pasta');
 
+    $formati = [];
+    foreach ($pasta as $product) {
+        if (!in_array($product['tipo'], $formati)) {
+            $formati[] = $product['tipo'];
+        }
+    };
+
+    // $filter = [];
+    // foreach ($formati as $formato) {
+    //
+    //     $category_filter = array_filter($formato->$pasta, function($product){
+    //         if ($product['tipo'] == $formato) {
+    //             return $product;
+    //         }
+    //     });
+    //
+    //     $filter[$formato] = $category_filter;
+    // }
+    //
+    // dd($filter);
+
     $data = [
         'products' => $pasta
     ];
@@ -35,13 +56,37 @@ Route::get('/products', function(){
 
 
 Route::get('/products/pasta_id_{id}', function($id){
+
     $pasta = config('pasta');
 
-    $prodotto = $pasta[$id];
+    if ($id >= 0 && $id < count($pasta) && is_numeric($id)) {
 
-    $data = [
-        'product' => $prodotto
-    ];
+        $prodotto = $pasta[$id];
 
-    return view('pasta', $data);
+        $prev = $id - 1;
+        $next = $id + 1;
+
+        if ($id == 0) {
+            $prev = count($pasta) - 1;
+        }
+
+        if ($id == count($pasta) - 1) {
+            $next = 0;
+        }
+
+        $data = [
+            'products' => $pasta,
+            'product' => $prodotto,
+            'commands' => [
+                'next' => $next,
+                'prev' => $prev
+            ]
+        ];
+
+        return view('pasta', $data);
+
+    } else {
+        abort('404');
+    }
+
 })->name('pasta');

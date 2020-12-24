@@ -1,5 +1,7 @@
 @extends('partials.common')
 
+@section('title', 'La Molisana - ' . $product['titolo'])
+
 @section ('content')
     <section class="products">
 
@@ -20,6 +22,44 @@
                 <div class="col-lg-12 p-0">
                     <img class="img-fluid" src="{{ $product['src-p'] }}" alt="{{ $product['titolo'] }}">
                 </div>
+            </div>
+
+            <div class="prev">
+                <a href=" {{ route('pasta', ['id' => $commands['prev']]) }} ">
+                    <div class="top">
+                        <div class="preview">
+                            <img src="{{ $products[$commands['prev']]['src'] }}" alt="{{ $products[$commands['prev']]['titolo'] }}">
+                        </div>
+                        <div class="arrow">
+                            <svg class="mk-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792">
+                                <path d="M1792 800v192q0 14-9 23t-23 9h-1248v224q0 21-19 29t-35-5l-384-350q-10-10-10-23 0-14 10-24l384-354q16-14 35-6 19 9 19 29v224h1248q14 0 23 9t9 23z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <h3 class="text-uppercase"> {{ $products[$commands['prev']]['titolo'] }} </h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="next">
+                <a href="{{ route('pasta', ['id' => ($commands['next']) ]) }}">
+                    <div class="top">
+                        <div class="preview">
+                            <img src="{{ $products[($commands['next'])]['src'] }}" alt="{{ $products[($commands['next'])]['titolo'] }}">
+                        </div>
+                        <div class="arrow">
+                            <svg class="mk-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792">
+                                <path d="M1728 893q0 14-10 24l-384 354q-16 14-35 6-19-9-19-29v-224h-1248q-14 0-23-9t-9-23v-192q0-14 9-23t23-9h1248v-224q0-21 19-29t35 5l384 350q10 10 10 23z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <h3 class="text-uppercase"> {{ $products[(($commands['next']))]['titolo'] }} </h3>
+                    </div>
+                </a>
             </div>
         </div>
 

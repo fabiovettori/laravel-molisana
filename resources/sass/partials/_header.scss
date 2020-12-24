@@ -34,7 +34,7 @@ header {
             padding: 10px;
             color: #001942;
 
-            &:hover {
+            &:hover, &.active {
                 text-decoration: none;
                 background-color: #B3E5FC;
                 color: #001942;
