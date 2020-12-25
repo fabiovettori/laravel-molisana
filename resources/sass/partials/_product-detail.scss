@@ -1,0 +1,248 @@
+main {
+    .products {
+
+        .title {
+            background-color: $product_page_primary_color;
+            color: $product_page_text_color;
+            margin-bottom: 1px;
+
+            h3 {
+                font-size: 16px;
+                line-height: 24px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                margin: 0;
+            }
+
+            a {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                color: #001942;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #001942;
+                }
+            }
+        }
+
+        .images {
+            position: relative;
+            overflow-x: hidden;
+
+            .prev, .next {
+                position: absolute;
+                top: 100px;
+                height: 200px;
+                width: 220px;
+                cursor:pointer;
+                transition: all .5s cubic-bezier(.77,.12,.26,.94);
+            }
+
+            .prev {
+                left: -150px;
+
+                a {
+                    color: #252525;
+                }
+
+                &:hover {
+                    left: 0;
+                }
+
+                .top {
+                    height: 60%;
+                    width: 100%;
+                    float: left;
+
+                    .preview {
+                        width: 50%;
+                        height: 100%;
+                        float: left;
+                        background-color: red;
+
+                        img {
+                            width: 110px;
+                            height: 120px;
+                        }
+
+                    }
+
+                    .arrow {
+                        @include flex(row, center, center);
+                        padding-left: 30px;
+                        width: 50%;
+                        height: 100%;
+                        float: left;
+                        background-color: rgba(0,0,0,.3);
+                        transition: all .3s ease;
+
+                        svg {
+                            fill: currentColor;
+                            color: #ffffff;
+                            width: 20px;
+                        }
+                    }
+                }
+
+                .bottom {
+                    @include flex(row, center, center);
+                    height: 0;
+                    width: 100%;
+                    float: left;
+                    opacity: 0;
+                    background-color: #ffffff;
+                    padding: 0;
+                    transition: opacity .3s .5s ease;
+
+                    h3 {
+                        font-family: "Open Sans", sans-serif;
+                        font-size: 13px;
+                        font-weight: 700;
+                        color: #252525;
+                        line-height: 20px;
+                        opacity: 0;
+                    }
+                }
+
+                &:hover .bottom {
+                    opacity: 1;
+                    height: 40%;
+                    padding: 20px;
+
+                    & h3 {
+                        opacity: 1;
+                    }
+                }
+
+                &:hover .arrow {
+                    padding-left: 0;
+                    background-color: rgba(0,0,0,.7);
+                }
+            }
+
+            .next {
+                right: -150px;
+
+                a {
+                    color: #252525;
+                }
+
+                &:hover {
+                    right: 0;
+                }
+
+                .top {
+                    height: 60%;
+                    width: 100%;
+                    float: left;
+
+                    .preview {
+                        width: 50%;
+                        height: 100%;
+                        float: right;
+                        background-color: red;
+
+                        img {
+                            width: 110px;
+                            height: 120px;
+                        }
+
+                    }
+
+                    .arrow {
+                        @include flex(row, center, center);
+                        padding-right: 30px;
+                        width: 50%;
+                        height: 100%;
+                        float: right;
+                        background-color: rgba(0,0,0,.3);
+                        transition: all .3s ease;
+
+                        svg {
+                            fill: currentColor;
+                            color: #ffffff;
+                            width: 20px;
+                        }
+                    }
+                }
+
+                .bottom {
+                    @include flex(row, center, center);
+                    height: 0;
+                    width: 100%;
+                    float: left;
+                    opacity: 0;
+                    background-color: #ffffff;
+                    padding: 0;
+                    transition: opacity .3s .5s ease;
+
+                    h3 {
+                        font-family: "Open Sans", sans-serif;
+                        font-size: 13px;
+                        font-weight: 700;
+                        color: #252525;
+                        line-height: 20px;
+                        opacity: 0;
+                    }
+                }
+
+                &:hover .bottom {
+                    opacity: 1;
+                    height: 40%;
+                    padding: 20px;
+
+                    & h3 {
+                        opacity: 1;
+                    }
+                }
+
+                &:hover .arrow {
+                    padding-right: 0;
+                    background-color: rgba(0,0,0,.7);
+                }
+            }
+        }
+
+        .details {
+            background-color: $product_page_primary_color;
+            color: $product_page_text_color;
+
+            h3 {
+                font-family: 'Teko', sans-serif;
+                font-size: 40px;
+                padding: 20px;
+                margin: 0;
+            }
+
+            .grid {
+                border-bottom: 1px solid black;
+            }
+
+            .grid-y {
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+            }
+        }
+
+        .description {
+            background-color: $product_page_primary_color;
+            color: $product_page_text_color;
+            padding-top: 20px;
+
+            p {
+                font-family: 'Playfair Display', serif;
+                font-size: 24px;
+                font-weight: 300;
+            }
+        }
+
+        .divider {
+            background-image: url('../images/posate-classiche.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 400px;
+        }
+    }
+}

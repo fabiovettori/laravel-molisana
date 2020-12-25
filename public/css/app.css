@@ -16268,6 +16268,54 @@ header .finder-closer:hover {
     display: none;
   }
 }
+footer {
+  padding-top: 100px;
+}
+footer .footer-top li:first-of-type {
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Teko", sans-serif;
+  color: #0d2240;
+}
+footer .footer-top li a {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #808080;
+}
+footer .footer-top li a.exeption {
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Teko", sans-serif;
+  color: #0d2240;
+}
+footer .footer-top li a:hover {
+  text-decoration: none;
+}
+footer .footer-top .company-details {
+  font-size: 11px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #808080;
+}
+footer .footer-top .company-details p {
+  margin: 3px 0;
+}
+footer .footer-top .company-details p strong {
+  font-weight: bold;
+}
+footer .footer-top .company-details .email-important {
+  text-decoration: underline;
+  color: #808080;
+}
+footer .footer-bottom {
+  height: 150px;
+  width: 100%;
+  background-image: url("../images/footer-montagne-bottom.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main .hero-section .hero-image {
   font-family: "Open Sans", sans-serif;
   height: 900px;
@@ -16538,52 +16586,32 @@ main .card-container .tile:hover a {
   opacity: 1;
 }
 
-footer {
-  padding-top: 100px;
+main .products-banner {
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  background-color: #001942;
+  padding: 15px 0;
 }
-footer .footer-top li:first-of-type {
-  font-size: 26px;
-  font-weight: 600;
-  font-family: "Teko", sans-serif;
-  color: #0d2240;
-}
-footer .footer-top li a {
+main .products-banner h2 {
   font-size: 18px;
-  font-weight: 300;
-  font-family: "Open Sans", sans-serif;
-  color: #808080;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 25px 20px 15px;
+  line-height: 120%;
 }
-footer .footer-top li a.exeption {
-  font-size: 26px;
-  font-weight: 600;
+main .products-banner p {
+  font-size: 14px;
+  margin: 0 20px 15px 23px;
+}
+main .products-list {
+  background-color: #daedf3;
+}
+main .products-list .category h3 {
   font-family: "Teko", sans-serif;
-  color: #0d2240;
-}
-footer .footer-top li a:hover {
-  text-decoration: none;
-}
-footer .footer-top .company-details {
-  font-size: 11px;
-  font-weight: 300;
-  font-family: "Open Sans", sans-serif;
-  color: #808080;
-}
-footer .footer-top .company-details p {
-  margin: 3px 0;
-}
-footer .footer-top .company-details p strong {
-  font-weight: bold;
-}
-footer .footer-top .company-details .email-important {
-  text-decoration: underline;
-  color: #808080;
-}
-footer .footer-bottom {
-  height: 150px;
-  width: 100%;
-  background-image: url("../images/footer-montagne-bottom.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  font-size: 70px;
+  color: #404040;
+  padding: 30px 0 50px;
+  margin: 0;
 }
 
 main .products .title {

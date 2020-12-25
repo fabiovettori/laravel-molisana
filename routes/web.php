@@ -33,22 +33,19 @@ Route::get('/products', function(){
         }
     };
 
-    // $filter = [];
-    // foreach ($formati as $formato) {
-    //
-    //     $category_filter = array_filter($formato->$pasta, function($product){
-    //         if ($product['tipo'] == $formato) {
-    //             return $product;
-    //         }
-    //     });
-    //
-    //     $filter[$formato] = $category_filter;
-    // }
-    //
-    // dd($filter);
+    $filter = [];
+    foreach ($formati as $formato) {
+        $category_filter = array_filter($pasta, function($product) use ( $formato ){
+            if ($product['tipo'] == $formato) {
+                return $product;
+            }
+        });
+        $filter[$formato] = $category_filter;
+    }
 
     $data = [
-        'products' => $pasta
+        'products' => $pasta,
+        'filter' => $filter
     ];
 
     return view('products', $data);
