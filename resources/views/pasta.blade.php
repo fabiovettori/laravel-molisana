@@ -63,28 +63,28 @@
             </div>
         </div>
 
-        <div class="details">
+        <div class="details px-3">
             <div class="container-md pt-5 pb-3">
-                <div class="row grid">
-                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-lg-3 d-flex justify-content-center align-items-center grid">
                         <img src=" {{ asset('images/marchio-sito-test.png') }}" alt="logo - La Molisana">
                     </div>
-                    <div class="col-lg-6 d-flex justify-content-center align-items-center grid-y">
+                    <div class="col-lg-6 d-flex justify-content-center align-items-center grid grid-y">
                         <h3 class="text-uppercase text-center">grano decorticato a pietra trafilatura a bronzo</h3>
                     </div>
-                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                    <div class="col-lg-3 d-flex justify-content-center align-items-center grid">
                         <img src=" {{ asset('images/marchio-matese-tab.png') }}" alt="Marchio matese">
                     </div>
                 </div>
 
-                <div class="row grid">
-                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-lg-3 d-flex justify-content-center align-items-center grid">
                         <h3 class="text-uppercase text-center">{{ $product['titolo'] }}</h3>
                     </div>
-                    <div class="col-lg-6 d-flex justify-content-center align-items-center grid-y">
+                    <div class="col-lg-6 d-flex justify-content-center align-items-center grid grid-y">
                         <h3 class="text-uppercase text-center">tempi di cottura: <span class="text-lowercase">{{ $product['cottura'] }}</span> </h3>
                     </div>
-                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                    <div class="col-lg-3 d-flex justify-content-center align-items-center grid">
                         <h3 class="text-lowercase">{{ $product['peso'] }}</h3>
                     </div>
                 </div>
@@ -100,6 +100,8 @@
                 </div>
             </div>
         </div>
-        <div class="divider"></div>
+        <div class="divider">
+            <img src="{{ asset('images/posate-classiche.jpg') }}" alt="posate-classiche - La Molisana">
+        </div>
     </section>
 @endsection

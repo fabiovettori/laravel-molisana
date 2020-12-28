@@ -1,8 +1,8 @@
 <footer>
     <section class="footer-top">
         <div class="container-lg">
-            <div class="row">
-                <div class="col-lg-3">
+            <div class="row text-center text-lg-left">
+                <div class="col-lg-3 pb-sm-5">
                     <img src="{{ asset('images/marchio-sito-test.png') }}" alt="la Molisana - logo">
                 </div>
 
@@ -47,7 +47,7 @@
         </div>
 
         <div class="container-lg">
-            <div class="row">
+            <div class="row text-center pt-sm-3 text-lg-left">
                 <ul class="offset-lg-3 col-lg-3 list-unstyled text-capitalize">
                     <li class="text-uppercase">prodotti</li>
                     <li><a href="#">le clasiche</a></li>

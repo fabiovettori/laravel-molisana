@@ -3,12 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>@yield('title')</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         {{-- CSS --}}
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         {{-- FONTS --}}
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Playfair+Display&family=Poppins:wght@800&family=Roboto:wght@100&family=Teko:wght@300;600&display=swap" rel="stylesheet">s
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Playfair+Display&family=Poppins:wght@800&family=Roboto:wght@100&family=Teko:wght@300;600&display=swap" rel="stylesheet">
 
         {{-- JS --}}
         <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>

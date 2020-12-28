@@ -1,247 +1,145 @@
 main {
     .hero-section .hero-image {
         font-family: 'Open Sans', sans-serif;
-        height: 900px;
-        width: 100%;
-        background-image: url('https://i.vimeocdn.com/clip_outro_background/678377.webp?mw=1600&mh=900');
-        background-size: 90%;
-        background-position: center;
-        transition: all 1s ease;
+        overflow: hidden;
 
-        &:hover {
-            cursor: pointer;
-            background-size: 95%;
+        img {
+            width: 100%;
+            transition: all 1s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
         }
     }
 
     .grid-products {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 480px;
+        .tiles-container {
+            border: none;
+            border-radius: none;
 
-        .top-left {
-            grid-column: 1 / 3;
-            grid-row: 1 / 2;
-            background-color: #c32230;
-            position: relative;
-
-            div {
-                height: 100%;
-
-                h3 {
-                    color: #ffffff;
-                    font-size: 36px;
-                    font-weight: 400;
-                    font-family: 'Playfair Display', serif;
-                }
-            }
-
-            img {
-                float: left;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            &::after {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 800;
-                font-size: 100px;
-                color: rgba(255, 58, 45, 0.2);
-                content: 'Pasta';
-                position: absolute;
-                display: block;
-                left: 50%;
-                margin-left: 50px;
-                top: 0;
-                z-index: 2;
-            }
-
-            a {
-                background-color: #ffffff;
-                font-size: 14px;
-                font-family: 'Roboto', sans-serif;
-                padding: 5px 20px;
-                border: none;
-                color: #002d73;
-                font-weight: 400;
-                border-radius: 17px;
-                margin-top: 10px;
-                transition: all .3s ease;
-
-                &:hover {
-                    background-color: #d9dabc;
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .top-rigth {
-            grid-column: 3 / 6;
-            grid-row: 1 / 2;
-            background-color: #daa624;
-            position: relative;
-
-            div {
-                height: 100%;
-
-                h3 {
-                    color: #ffffff;
-                    font-size: 32px;
-                    font-weight: 400;
-                    font-family: 'Playfair Display', serif;
-                }
-            }
-
-            img {
-                float: left;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            &::after {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 800;
-                font-size: 100px;
-                color: rgba(232, 180, 39, 0.24);
-                content: 'Semole';
-                position: absolute;
-                display: block;
-                left: 50%;
-                margin-left: 50px;
-                top: 0;
-                z-index: 2;
-            }
-
-            a {
-                background-color: #ffffff;
-                font-size: 14px;
-                font-family: 'Roboto', sans-serif;
-                padding: 5px 20px;
-                border: none;
-                color: #002d73;
-                font-weight: 400;
-                border-radius: 17px;
-                margin-top: 10px;
-                transition: all .3s ease;
-
-                &:hover {
-                    background-color: #d9dabc;
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .middle-left {
-            grid-column: 1 / 3;
-            grid-row: 2 / 4;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .middle-rigth {
-            grid-column: 3 / 6;
-            grid-row: 2 / 4;
-
-            > div {
-                float: left;
-                max-width: 50%;
-                height: 50%;
-
-                img {
-                    max-width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-
-        .bottom-left {
-            grid-column: 1 / 3;
-            grid-row: 4 / 6;
-
-            > div {
-                float: left;
-                max-width: 50%;
-                height: 50%;
-
-                img {
-                    max-width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-
-        .bottom-rigth {
-            grid-column: 3 / 6;
-            grid-row: 4 / 6;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .more-info {
-            position: relative;
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #001942;
-                opacity: 0;
-                z-index: 1;
-                transition: opacity .3s ease;
-            }
-
-            &:hover::after {
-                opacity: .85;
-            }
-
-            &:hover .description-info {
-                opacity: 1;
-            }
-
-            &:hover .description-info h3 {
-                padding-top: 20%;
-            }
-        }
-
-        .description-info {
-            @include flex(column, center, center);
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            transition: all .3s ease;
-            opacity: 0;
-
-            &:hover {
+            &:hover .more {
                 cursor: pointer;
+                display: block;
             }
 
-            svg {
-                width: 50px;
-                fill: currentColor;
-                color: #ffffff;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
-            h3 {
+            .tile-small, .tile-large {
+                position: relative;
+
+                .more {
+                    @include flex(column, center, center);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #001942;
+                    opacity: 0;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                    padding: 30px;
+                    transition: all .3s ease;
+
+                    p {
+                        font-family: 'Playfair Display', serif;
+                        font-size: 30px;
+                        line-height: 38px;
+                        font-weight: 400;
+                        color: #ffffff;
+                        margin: 0;
+                    }
+                }
+
+                svg {
+                    fill: currentColor;
+                    color: #ffffff;
+                    width: 50px;
+                    padding-bottom: 8%;
+                    transition: all .3s ease;
+                }
+
+                &:hover svg {
+                    padding-bottom: 5%;
+                }
+
+                &:hover .more {
+                    opacity: .85;
+                }
+            }
+
+            .tile-small {
+                width: 100%;
+                height: 450px;
+            }
+
+            .tile-large {
+                width: 100%;
+                height: 450px;
+            }
+        }
+
+        .recipes-container {
+            .tile-small.description {
+                @include flex(column, space-around, flex-start);
                 font-family: 'Playfair Display', serif;
-                font-size: 30px;
-                font-weight: 400;
+                font-size: 34px;
                 color: #ffffff;
-                padding-top: 25%;
-                transition: all .3s ease;
+                padding: 30px;
+
+                h3 {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 100px;
+                }
+
+                p {
+                    line-height: 1.1;
+                    margin: 0;
+                    white-space: pre-line;
+                    text-align: left;
+                }
+
+                a {
+                    background-color: #ffffff;
+                    padding: 5px 20px;
+                    font-family: 'Roboto', sans-serif;
+                    color: #000000;
+                    font-size: 15px;
+                    border: none;
+                    border-radius: 16px;
+                    margin-top: 20px;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        background-color: rgb(216, 217, 188);
+                        text-decoration: none;
+                        color: #000000;
+                    }
+                }
+            }
+
+            &:first-of-type {
+                .tile-small.description {
+                    background-color: #be222f;
+
+                    & h3 {
+                        color: rgba(255, 58, 45, 0.2);
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                .tile-small.description {
+                    background-color: #c89e1f;
+
+                    & h3 {
+                        color: rgba(232, 180, 39, 0.24);
+                    }
+                }
             }
         }
     }
@@ -303,6 +201,244 @@ main {
             &:hover a {
                 padding-top: 0px;
                 opacity: 1;
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    main {
+        .grid-products {
+
+            .tiles-container {
+
+                .tile-small {
+                    width: 50%;
+                    height: 300px;
+                }
+
+                .tile-small.recipes {
+                    width: 50%;
+                    height: 300px;
+                }
+
+                .tile-large {
+                    width: 100%;
+                    height: 600px;
+                }
+            }
+
+            .recipes-container {
+                .tile-small.description {
+                    font-size: 28px;
+
+                    h3 {
+                        font-size: 64px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        .grid-products {
+            .tiles-container {
+                .tile-small {
+                    height: 320px;
+                }
+
+                .tile-small.recipes {
+                    height: 320px;
+                }
+
+                .tile-large {
+                    height: 640px;
+                }
+            }
+
+            .recipes-container {
+                .tile-small.description {
+                    h3 {
+                        font-size: 82px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 892px) {
+    main {
+        .grid-products {
+            .tiles-container {
+                .tile-small {
+                    height: 370px;
+                }
+
+                .tile-small.recipes {
+                    height: 370px;
+                }
+
+                .tile-large {
+                    height: 740px;
+                }
+            }
+
+            .recipes-container {
+                .tile-small.description {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        .grid-products {
+            .tiles-container {
+                .tile-small {
+                    height: 250px;
+                }
+
+                .tile-small.recipes {
+                    height: 250px;
+                }
+
+                .tile-large {
+                    height: 500px;
+                }
+
+                .tile-small, .tile-large {
+                    .more {
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .recipes-container {
+                .tile-small.description {
+                    font-size: 24px;
+
+                    h3 {
+                        font-size: 54px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        .grid-products {
+            .tiles-container {
+                .tile-small {
+                    height: 270px;
+                }
+
+                .tile-small.recipes {
+                    height: 270px;
+                }
+
+                .tile-large {
+                    height: 540px;
+                }
+
+                .tile-small, .tile-large {
+                    .more {
+                        p {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+
+            .recipes-container {
+                .tile-small.description {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        .grid-products {
+            .tiles-container {
+                .tile-small {
+                    height: 350px;
+                }
+
+                .tile-small.recipes {
+                    height: 350px;
+                }
+
+                .tile-large {
+                    height: 700px;
+                }
+
+                .tile-small, .tile-large {
+                    .more {
+                        p {
+                            font-size: 32px;
+                        }
+                    }
+                }
+            }
+
+            .recipes-container {
+                .tile-small.description {
+                    font-size: 28px;
+
+                    h3 {
+                        font-size: 82px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    main {
+        .grid-products {
+            .tiles-container {
+                .tile-small {
+                    height: 400px;
+                }
+
+                .tile-small.recipes {
+                    height: 400px;
+                }
+
+                .tile-large {
+                    height: 800px;
+                }
+
+                .tile-small, .tile-large {
+                    .more {
+                        p {
+                            font-size: 36px;
+                        }
+                    }
+                }
+            }
+
+            .recipes-container {
+                .tile-small.description {
+                    font-size: 32px;
+
+                    h3 {
+                        font-size: 92px;
+                    }
+                }
             }
         }
     }

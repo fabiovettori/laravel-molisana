@@ -1,5 +1,5 @@
 footer {
-    padding-top: 100px;
+    padding-top: 50px;
 
     .footer-top {
         li {
@@ -56,5 +56,11 @@ footer {
         background-image: url('../images/footer-montagne-bottom.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    footer {
+        padding-top: 100px;
     }
 }
