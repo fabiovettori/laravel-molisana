@@ -13,6 +13,15 @@
         <div class="container-lg header-menu">
             <div class="row">
                 <div class="col-lg-12 text-center">
+
+                    <div class="hamburger text-center">
+                        <div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
                     <ul class="list-unstyled m-0 menu-links">
                         <li><a class="{{ Route::currentRouteName() == 'home' ? 'active' : '' }}" href="{{ route('home') }}">home</a></li>
                         <li><a href="#">grano italiano</a></li>
@@ -34,14 +43,6 @@
                         <li><a href="#">US</a></li>
                         <li><a href="#">FR</a></li>
                     </ul>
-
-                    <div class="hamburger text-center">
-                        <div>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
                 </div>
             </div>
 

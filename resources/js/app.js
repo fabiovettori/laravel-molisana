@@ -27,4 +27,13 @@ $(document).ready(function(){
     $('.scroll-top').click(function(){
         window.scrollTo(0,0);
     });
+
+
+    $('.hamburger').click(function(){
+        if (!$('.menu-links').hasClass('active')) {
+            $('.menu-links').addClass('active');
+        } else {
+            $('.menu-links').removeClass('active');
+        }
+    })
 });

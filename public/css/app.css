@@ -16138,7 +16138,7 @@ body {
 }
 
 header {
-  padding-bottom: 130px;
+  padding-bottom: 150px;
 }
 header section {
   position: fixed;
@@ -16153,8 +16153,15 @@ header section {
 header section .header-logo {
   width: 150px;
 }
-header section .menu-links, header section .finder-icon {
+header section .finder-icon {
   display: none;
+}
+header section .menu-links {
+  text-align: left;
+  display: none;
+}
+header section .menu-links.active {
+  display: block;
 }
 header section .hamburger {
   height: 56px;
@@ -16177,18 +16184,29 @@ header section .hamburger span {
 header section .header-menu {
   margin-top: 10px;
 }
+header section li {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+header section li:last-of-type {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
 header section li a {
+  font-family: "Open Sans", sans-serif;
   display: block;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
   color: #444444;
   text-transform: capitalize;
-  padding: 10px;
+  padding: 15px 20px;
   color: #001942;
 }
 header section li a:hover, header section li a.active {
   text-decoration: none;
-  background-color: #B3E5FC;
   color: #001942;
+}
+header section li a.active {
+  background-color: #B3E5FC;
 }
 header section .finder-icon {
   position: absolute;
@@ -16293,6 +16311,22 @@ header section .finder-closer:hover {
   }
   header section .hamburger {
     display: none;
+  }
+  header section li {
+    border: none;
+  }
+  header section li:last-of-type {
+    border: none;
+  }
+  header section li a {
+    font-family: "Teko", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: normal;
+  }
+  header section li a:hover {
+    background-color: #B3E5FC;
   }
 }
 footer {
